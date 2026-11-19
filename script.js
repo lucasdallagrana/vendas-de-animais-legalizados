@@ -96,7 +96,7 @@ const animals = [
     doc: "GTA + Anilha",
     care: "Ideal para chácaras e quintais pequenos devido ao porte compacto e baixo consumo de ração.",
     desc: "Pequeno notável de pernas curtas e cauda vertical em leque. Muito apreciado em criações ornamentais.",
-    image: "https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=700&q=80",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSveAD_2wUZhtcpseN1p7o3-UEE63jycGCB9237T0_52A&s=10",
     featured: 10
   },
 
@@ -130,7 +130,7 @@ const animals = [
     doc: "GTA + Nota Fiscal",
     care: "Viveiro com altura máxima de 40 cm ou tela macia no teto para evitar impactos ao pular.",
     desc: "Linhagem de dupla aptidão (ovos grandes e carne nobre), ideal para iniciar sua própria matriz reprodutora.",
-    image: "https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=700&q=80",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROsvcU1rBHx803aflCPPASXGUcAGt6t9GimSVk0zKVhg&s=10",
     featured: 9
   },
   {
@@ -146,7 +146,7 @@ const animals = [
     doc: "GTA + Anilha",
     care: "Perfeitas para o fundo de viveiros de pássaros exóticos, ajudando na limpeza de sementes caídas.",
     desc: "Menores codornas do mundo, com coloração azul-ardósia e castanha no macho. Muito ornamentais.",
-    image: "https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=700&q=80",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuK90PQTwNC0RLn7btqO2DVcrIutwV0zGKqfeBMFpa1A&s",
     featured: 11
   },
 
@@ -196,7 +196,7 @@ const animals = [
     doc: "Certificado IBAMA + Microchip + NF",
     care: "Necessita de tanque ou lago ornamental com rampas de fácil acesso ao sol e alimentação variada.",
     desc: "Espécie brasileira de pescoço longo e barbilhões característicos sob o queixo. Procedência 100% legalizada.",
-    image: "https://images.unsplash.com/photo-1559253664-ca249d4608c6?auto=format&fit=crop&w=700&q=80",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkNNXOXkFK_WQmXbcLFa7uSHhBDBrYDB42FTxFl3bRCw&s=10",
     featured: 12
   }
 ];
