@@ -1,4 +1,4 @@
-// Banco de Dados do Plantel
+// Banco de Dados do Plantel (Imagens verificadas por espécie)
 const animals = [
   // GALINHAS
   {
@@ -14,7 +14,7 @@ const animals = [
     doc: "GTA + Vacinação Completa",
     care: "Produz até 280 ovos vermelhos por ano. Ideal para criação solta em piquetes ou galinheiros ventilados.",
     desc: "Franga selecionada de alta rusticidade e excelente conversão alimentar, já vacinada contra Marek, Newcastle e Bouba Aviária.",
-    image: "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=700&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Male_and_female_chicken_sitting_together.jpg/640px-Male_and_female_chicken_sitting_together.jpg",
     featured: 1
   },
   {
@@ -30,7 +30,7 @@ const animals = [
     doc: "GTA + Anilha do Criatório",
     care: "Por ter penas nos pés, recomenda-se piso seco e poleiros baixos (máximo 40 cm do solo).",
     desc: "Conhecida como a 'rainha das galinhas' pelo porte majestoso, plumagem branca com colar preto e pés empenados.",
-    image: "https://images.unsplash.com/photo-1612170153139-6f881ff067e0?auto=format&fit=crop&w=700&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Light_Brahma_hen.jpg/640px-Light_Brahma_hen.jpg",
     featured: 3
   },
   {
@@ -46,7 +46,7 @@ const animals = [
     doc: "GTA + Atestado Sanitário",
     care: "Plumagem macia como seda que não repele água; manter abrigo coberto em dias chuvosos.",
     desc: "Ave ornamental de plumagem sedosa, pele escura e cinco dedos. Muito procurada como pet e mãe adotiva de ovos.",
-    image: "https://images.unsplash.com/photo-1594731884638-8197c3102d1d?auto=format&fit=crop&w=700&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/White_Silkie_Hen.jpg/640px-White_Silkie_Hen.jpg",
     featured: 7
   },
 
@@ -64,7 +64,7 @@ const animals = [
     doc: "GTA + Registro Genealógico",
     care: "Requer espaço amplo para exercitar a musculatura e ração balanceada rica em cálcio e proteína.",
     desc: "Reprodutor de linhagem selecionada para melhoramento genético de plantel caipira, com excelente estrutura óssea e porte elevado.",
-    image: "https://images.unsplash.com/photo-1569396116180-210c182bedb8?auto=format&fit=crop&w=700&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Brown_Leghorn_rooster_in_Australia.jpg/640px-Brown_Leghorn_rooster_in_Australia.jpg",
     featured: 2
   },
   {
@@ -80,7 +80,7 @@ const animals = [
     doc: "GTA + Vacinação em dia",
     care: "Excelente para cruzamento industrial ou caipira visando filhas de alta postura.",
     desc: "Plumagem vermelho-mogno brilhante, alta fertilidade e resistência climática comprovada.",
-    image: "https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=700&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Female_pair.jpg/640px-Female_pair.jpg",
     featured: 8
   },
   {
@@ -96,7 +96,7 @@ const animals = [
     doc: "GTA + Anilha",
     care: "Ideal para chácaras e quintais pequenos devido ao porte compacto e baixo consumo de ração.",
     desc: "Pequeno notável de pernas curtas e cauda vertical em leque. Muito apreciado em criações ornamentais.",
-    image: "https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=700&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Japanese_Bantam_rooster.jpg/640px-Japanese_Bantam_rooster.jpg",
     featured: 10
   },
 
@@ -114,7 +114,7 @@ const animals = [
     doc: "GTA + Controle Sanitário",
     care: "Necessitam de ração específica para postura de codornas (20% proteína) e água limpa constante.",
     desc: "Lote composto por 10 fêmeas jovens no pico inicial de produção, capazes de botar até 300 ovos/ano cada.",
-    image: "https://images.unsplash.com/photo-1598974357801-cbca100e65d3?auto=format&fit=crop&w=700&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Coturnix_japonica_2012_G1.jpg/640px-Coturnix_japonica_2012_G1.jpg",
     featured: 4
   },
   {
@@ -130,7 +130,7 @@ const animals = [
     doc: "GTA + Nota Fiscal",
     care: "Viveiro com altura máxima de 40 cm ou tela macia no teto para evitar impactos ao pular.",
     desc: "Linhagem de dupla aptidão (ovos grandes e carne nobre), ideal para iniciar sua própria matriz reprodutora.",
-    image: "https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=700&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Coturnix_coturnix_-_01.jpg/640px-Coturnix_coturnix_-_01.jpg",
     featured: 9
   },
   {
@@ -146,7 +146,7 @@ const animals = [
     doc: "GTA + Anilha",
     care: "Perfeitas para o fundo de viveiros de pássaros exóticos, ajudando na limpeza de sementes caídas.",
     desc: "Menores codornas do mundo, com coloração azul-ardósia e castanha no macho. Muito ornamentais.",
-    image: "https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=700&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Excalfactoria_chinensis_-Jurong_Bird_Park-8a.jpg/640px-Excalfactoria_chinensis_-Jurong_Bird_Park-8a.jpg",
     featured: 11
   },
 
@@ -164,7 +164,7 @@ const animals = [
     doc: "Certificado IBAMA + Microchip + NF",
     care: "Exige aquaterrário com área seca, filtragem eficiente, termostato e lâmpada UVB 5.0.",
     desc: "Quelônio semiaquático nativo, nascido em criadouro comercial autorizado pelo IBAMA. Acompanha microchip e certificado de origem.",
-    image: "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?auto=format&fit=crop&w=700&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Trachemys_dorbigni_-_01.jpg/640px-Trachemys_dorbigni_-_01.jpg",
     featured: 5
   },
   {
@@ -180,7 +180,7 @@ const animals = [
     doc: "Certificado IBAMA + Microchip + NF",
     care: "Espécie 100% terrestre (não sabe nadar). Precisa de sol diário, abrigo seco e dieta rica em fibras e cálcio.",
     desc: "O quelônio terrestre mais querido do Brasil, com escamas vermelhas nas patas e casco escuro. Legalizado com nota e microchip.",
-    image: "https://images.unsplash.com/photo-1504450874802-0ba2bcd9b5ae?auto=format&fit=crop&w=700&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Chelonoidis_carbonaria_-_Red-footed_Tortoise.jpg/640px-Chelonoidis_carbonaria_-_Red-footed_Tortoise.jpg",
     featured: 6
   },
   {
@@ -196,7 +196,7 @@ const animals = [
     doc: "Certificado IBAMA + Microchip + NF",
     care: "Necessita de tanque ou lago ornamental com rampas de fácil acesso ao sol e alimentação variada.",
     desc: "Espécie brasileira de pescoço longo e barbilhões característicos sob o queixo. Procedência 100% legalizada.",
-    image: "https://images.unsplash.com/photo-1559253664-ca249d4608c6?auto=format&fit=crop&w=700&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Phrynops_geoffroanus_-_Geoffroy%27s_side-necked_turtle.jpg/640px-Phrynops_geoffroanus_-_Geoffroy%27s_side-necked_turtle.jpg",
     featured: 12
   }
 ];
@@ -212,6 +212,16 @@ let state = {
 
 // Formatação Moeda BRL
 const formatBRL = (val) => val.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+// Fallback de imagem caso ocorra falha de rede
+function handleImageError(imgEl, label) {
+  imgEl.onerror = null;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+    <rect width="600" height="400" fill="#F2ECE4"/>
+    <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#2D5A27">${label}</text>
+  </svg>`;
+  imgEl.src = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+}
 
 // Renderizar Produtos
 function renderProducts() {
@@ -247,7 +257,7 @@ function renderProducts() {
     return `
       <article class="bg-white rounded-2xl border border-stone-200/80 overflow-hidden shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group">
         <div class="relative h-52 bg-stone-200 overflow-hidden cursor-pointer" onclick="openProductModal(${animal.id})">
-          <img src="${animal.image}" alt="${animal.name}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <img src="${animal.image}" alt="${animal.name}" onerror="handleImageError(this, '${animal.categoryLabel}')" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           <span class="absolute top-3 left-3 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider ${badgeColor} backdrop-blur-xs">
             ${animal.categoryLabel}
           </span>
@@ -336,7 +346,10 @@ function openProductModal(id) {
   const animal = animals.find(a => a.id === id);
   if (!animal) return;
 
-  document.getElementById('modalImg').src = animal.image;
+  const modalImg = document.getElementById('modalImg');
+  modalImg.src = animal.image;
+  modalImg.onerror = () => handleImageError(modalImg, animal.categoryLabel);
+
   document.getElementById('modalBadge').textContent = animal.categoryLabel;
   document.getElementById('modalScientific').textContent = animal.scientific;
   document.getElementById('modalTitle').textContent = animal.name;
@@ -415,7 +428,7 @@ function updateCartUI() {
   footer.classList.remove('hidden');
   container.innerHTML = state.cart.map(item => `
     <div class="flex gap-3.5 bg-brand-cream/70 p-3.5 rounded-2xl border border-stone-200/80">
-      <img src="${item.image}" alt="${item.name}" class="w-16 h-16 rounded-xl object-cover shrink-0">
+      <img src="${item.image}" alt="${item.name}" onerror="handleImageError(this, '${item.categoryLabel}')" class="w-16 h-16 rounded-xl object-cover shrink-0">
       <div class="flex-1 min-w-0">
         <h4 class="font-semibold text-sm text-brand-bark truncate">${item.name}</h4>
         <span class="text-xs text-stone-500 block">${formatBRL(item.price)} (${item.unit})</span>
