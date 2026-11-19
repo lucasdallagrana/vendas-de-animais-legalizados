@@ -1,190 +1,521 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FF Diamonds Shop - Trabalho Escolar</title>
-    <!-- Tailwind CSS CDN para estilização rápida e moderna -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons para ícones modernos -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Estilos Personalizados -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Granja & Répteis Brasil | Galinhas, Galos, Codornas e Tartarugas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Fraunces"', 'serif'],
+          },
+          colors: {
+            brand: {
+              cream: '#FAF8F5',
+              sand: '#F2ECE4',
+              green: '#2D5A27',
+              greenDark: '#1E3F1A',
+              terracotta: '#C85A32',
+              terracottaDark: '#A84724',
+              amber: '#D97706',
+              bark: '#2C241E'
+            }
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body class="min-h-screen flex flex-col justify-between">
+<body class="bg-brand-cream text-brand-bark font-sans antialiased selection:bg-brand-green selection:text-white">
 
-    <!-- Cabeçalho / Navbar -->
-    <header class="bg-slate-900/90 backdrop-blur-md border-b border-slate-800 sticky top-0 z-40">
-        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <div class="bg-red-600 p-2 rounded-lg shadow-lg">
-                    <i data-lucide="gem" class="w-6 h-6 text-white"></i>
-                </div>
-                <div>
-                    <h1 class="text-2xl font-bold font-gaming tracking-wider text-white uppercase leading-none">
-                        FF <span class="text-red-500">DIAMONDS</span>
-                    </h1>
-                    <span class="text-xs text-slate-400">Trabalho Acadêmico / Demonstrativo</span>
-                </div>
-            </div>
-            
-            <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
-                <a href="#pacotes" class="hover:text-red-400 transition-colors">Pacotes</a>
-                <a href="#como-funciona" class="hover:text-red-400 transition-colors">Como Funciona</a>
-                <span class="bg-yellow-500/10 text-yellow-400 border border-yellow-500/30 text-xs px-2.5 py-1 rounded-full font-semibold">
-                    Simulador Ativo
-                </span>
-            </div>
+  <!-- Barra Superior de Aviso Legal -->
+  <div class="bg-brand-greenDark text-white text-xs py-2 px-4 text-center">
+    <span class="inline-flex items-center gap-2 font-medium">
+      <i class="fa-solid fa-shield-halved text-amber-400"></i>
+      Criatório Legalizado: Aves com GTA &amp; Quelônios com Certificado IBAMA/SISFAUNA e Microchipagem.
+    </span>
+  </div>
+
+  <!-- Cabeçalho -->
+  <header class="sticky top-0 z-40 bg-brand-cream/95 backdrop-blur-md border-b border-stone-200/80 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group shrink-0">
+        <div class="w-11 h-11 rounded-xl bg-brand-green text-white flex items-center justify-center shadow-md group-hover:bg-brand-terracotta transition-colors">
+          <i class="fa-solid fa-feather-pointed text-xl"></i>
         </div>
-    </header>
-
-    <!-- Banner Principal -->
-    <section class="relative bg-gradient-to-r from-red-950/40 via-slate-900 to-slate-900 border-b border-slate-800 py-10 px-4">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="space-y-3 text-center md:text-left">
-                <span class="text-red-500 font-bold uppercase tracking-wider text-xs bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20">
-                    Recarga Instantânea Simulada
-                </span>
-                <h2 class="text-3xl md:text-5xl font-extrabold font-gaming text-white uppercase tracking-wide">
-                    Adquira Diamantes para o seu ID
-                </h2>
-                <p class="text-slate-400 max-w-lg text-sm md:text-base">
-                    Selecione a quantidade de diamantes desejada, informe seu ID do jogador e finalize o pedido para testar o sistema da loja.
-                </p>
-            </div>
-            <div class="bg-slate-800/60 p-4 rounded-xl border border-slate-700/50 flex items-center space-x-4">
-                <i data-lucide="shield-check" class="w-10 h-10 text-emerald-400"></i>
-                <div>
-                    <h3 class="text-sm font-bold text-white">Ambiente Seguro de Testes</h3>
-                    <p class="text-xs text-slate-400">Nenhum pagamento real será processado.</p>
-                </div>
-            </div>
+        <div>
+          <span class="font-serif font-bold text-xl sm:text-2xl tracking-tight text-brand-bark block leading-none">
+            Granja &amp; Répteis
+          </span>
+          <span class="text-[11px] uppercase tracking-widest text-brand-green font-semibold">
+            Criatório Selecionado
+          </span>
         </div>
-    </section>
+      </a>
 
-    <!-- Conteúdo Principal / Loja -->
-    <main class="max-w-6xl mx-auto px-4 py-8 flex-grow w-full">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            
-            <!-- Coluna de Seleção de Pacotes -->
-            <div class="lg:col-span-2 space-y-6">
-                <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-                    <h3 id="pacotes" class="text-xl font-bold font-gaming text-white uppercase tracking-wider flex items-center gap-2">
-                        <i data-lucide="package" class="text-red-500 w-5 h-5"></i> 1. Escolha o Pacote
-                    </h3>
-                    <span class="text-xs text-slate-400">Valores demonstrativos</span>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="packages-container">
-                    <!-- Pacotes injetados via JavaScript -->
-                </div>
-            </div>
-
-            <!-- Coluna de Identificação e Resumo do Pedido -->
-            <div class="space-y-6">
-                <!-- Passo 2: ID do Jogador -->
-                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-xl space-y-4">
-                    <h3 class="text-xl font-bold font-gaming text-white uppercase tracking-wider flex items-center gap-2 border-b border-slate-800 pb-2">
-                        <i data-lucide="user-check" class="text-yellow-500 w-5 h-5"></i> 2. ID do Jogador
-                    </h3>
-                    <div>
-                        <label for="player-id" class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">
-                            Insira o ID do Free Fire
-                        </label>
-                        <div class="relative">
-                            <input type="text" id="player-id" placeholder="Ex: 123456789" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-2.5 text-white placeholder-slate-500 focus:outline-none focus:border-red-500 focus:ring-1 focus:ring-red-500 text-sm">
-                            <button type="button" onclick="validateId()" class="absolute right-2 top-2 bg-slate-800 hover:bg-slate-700 text-xs text-slate-300 font-semibold px-2.5 py-1 rounded transition-colors">
-                                Validar
-                            </button>
-                        </div>
-                        <p id="id-feedback" class="text-xs mt-2 hidden"></p>
-                    </div>
-                </div>
-
-                <!-- Passo 3: Resumo do Pedido -->
-                <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 shadow-xl space-y-4">
-                    <h3 class="text-xl font-bold font-gaming text-white uppercase tracking-wider flex items-center gap-2 border-b border-slate-800 pb-2">
-                        <i data-lucide="shopping-cart" class="text-red-500 w-5 h-5"></i> Resumo do Pedido
-                    </h3>
-                    
-                    <div class="space-y-3 text-sm">
-                        <div class="flex justify-between text-slate-400">
-                            <span>Pacote selecionado:</span>
-                            <span id="summary-package" class="font-semibold text-white">Nenhum</span>
-                        </div>
-                        <div class="flex justify-between text-slate-400">
-                            <span>Bônus:</span>
-                            <span id="summary-bonus" class="font-semibold text-yellow-400">+0 Dima</span>
-                        </div>
-                        <div class="flex justify-between text-slate-400">
-                            <span>ID do Jogador:</span>
-                            <span id="summary-id" class="font-mono text-slate-300">Não informado</span>
-                        </div>
-                        <div class="border-t border-slate-800 pt-3 flex justify-between items-center">
-                            <span class="font-bold text-white text-base">Total:</span>
-                            <span id="summary-total" class="text-2xl font-bold text-emerald-400 font-gaming">R$ 0,00</span>
-                        </div>
-                    </div>
-
-                    <button id="checkout-btn" onclick="processCheckout()" disabled class="w-full bg-slate-800 text-slate-500 font-bold py-3 rounded-lg text-sm tracking-wider uppercase cursor-not-allowed transition-all duration-200 hover:shadow-lg">
-                        Finalizar Pedido
-                    </button>
-                </div>
-            </div>
-
+      <!-- Busca Desktop -->
+      <div class="hidden md:flex flex-1 max-w-md mx-4">
+        <div class="relative w-full">
+          <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-400 text-sm"></i>
+          <input
+            type="text"
+            id="searchInputDesktop"
+            placeholder="Buscar galinhas, galos, codornas, jabuti..."
+            class="w-full pl-10 pr-4 py-2.5 bg-white border border-stone-200 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-brand-green/40 focus:border-brand-green transition"
+          >
         </div>
-    </main>
+      </div>
 
-    <!-- Modal de Confirmação (Checkout Fictício) -->
-    <div id="checkout-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-        <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-md w-full p-6 space-y-5 text-center relative shadow-2xl">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
-                <i data-lucide="x" class="w-5 h-5"></i>
-            </button>
+      <!-- Navegação e Carrinho -->
+      <div class="flex items-center gap-3 sm:gap-5">
+        <a href="#catalogo" class="hidden lg:inline-block text-sm font-semibold text-stone-700 hover:text-brand-green transition">Catálogo</a>
+        <a href="#legalidade" class="hidden lg:inline-block text-sm font-semibold text-stone-700 hover:text-brand-green transition">Documentação</a>
 
-            <div class="w-16 h-16 bg-emerald-500/10 border border-emerald-500/30 rounded-full flex items-center justify-center mx-auto text-emerald-400">
-                <i data-lucide="check-circle-2" class="w-10 h-10"></i>
-            </div>
-
-            <div>
-                <h3 class="text-2xl font-bold font-gaming text-white uppercase">Pedido Simulado com Sucesso!</h3>
-                <p class="text-xs text-slate-400 mt-1">Este é um projeto de simulação escolar.</p>
-            </div>
-
-            <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-2 text-left text-sm">
-                <div class="flex justify-between">
-                    <span class="text-slate-400">ID de Destino:</span>
-                    <span id="modal-id" class="font-mono text-white font-bold"></span>
-                </div>
-                <div class="flex justify-between">
-                    <span class="text-slate-400">Quantidade:</span>
-                    <span id="modal-amount" class="text-yellow-400 font-semibold"></span>
-                </div>
-                <div class="flex justify-between">
-                    <span class="text-slate-400">Valor Total:</span>
-                    <span id="modal-total" class="text-emerald-400 font-bold"></span>
-                </div>
-                <div class="flex justify-between">
-                    <span class="text-slate-400">Status:</span>
-                    <span class="text-emerald-400 font-medium">Aprovado (Simulação)</span>
-                </div>
-            </div>
-
-            <button onclick="closeModal()" class="w-full bg-red-600 hover:bg-red-500 text-white font-bold py-2.5 rounded-lg text-sm uppercase transition-colors">
-                Concluir
-            </button>
-        </div>
+        <button
+          onclick="toggleCart(true)"
+          class="relative flex items-center gap-2.5 bg-brand-bark hover:bg-brand-green text-white px-4 py-2.5 rounded-full text-sm font-semibold transition shadow-sm cursor-pointer"
+          aria-label="Abrir carrinho"
+        >
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="hidden sm:inline">Carrinho</span>
+          <span id="cartBadge" class="bg-brand-terracotta text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">
+            0
+          </span>
+        </button>
+      </div>
     </div>
 
-    <!-- Rodapé -->
-    <footer class="bg-slate-950 border-t border-slate-800 py-6 text-center text-xs text-slate-500 mt-12">
-        <div class="max-w-6xl mx-auto px-4 space-y-2">
-            <p>Projeto acadêmico desenvolvido para fins de demonstração escolar.</p>
-            <p>Garena Free Fire é uma marca registrada de seus respectivos proprietários.</p>
-        </div>
-    </footer>
+    <!-- Busca Mobile -->
+    <div class="md:hidden px-4 pb-3">
+      <div class="relative w-full">
+        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-400 text-sm"></i>
+        <input
+          type="text"
+          id="searchInputMobile"
+          placeholder="Buscar espécie, raça ou finalidade..."
+          class="w-full pl-10 pr-4 py-2 bg-white border border-stone-200 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-brand-green/40"
+        >
+      </div>
+    </div>
+  </header>
 
-    <!-- Lógica JavaScript -->
-    <script src="script.js"></script>
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden bg-brand-sand border-b border-stone-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20 grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-stone-200 text-xs font-semibold text-brand-green shadow-xs">
+          <span class="w-2 h-2 rounded-full bg-brand-green animate-pulse"></span>
+          Envio Especializado de Carga Viva para Todo o Brasil
+        </div>
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-bark leading-[1.1]">
+          Aves de Linhagem e Quelônios Legalizados
+        </h1>
+        <p class="text-base sm:text-lg text-stone-600 max-w-2xl leading-relaxed">
+          Do quintal produtivo ao terrário ornamental: encontre <strong>galinhas poedeiras</strong>, <strong>galos reprodutores</strong>, <strong>codornas selecionadas</strong> e <strong>tartarugas e jabutis</strong> com procedência garantida, vacinação em dia e documentação oficial.
+        </p>
+        <div class="flex flex-wrap items-center gap-4 pt-2">
+          <a href="#catalogo" class="px-7 py-3.5 rounded-full bg-brand-terracotta hover:bg-brand-terracottaDark text-white font-semibold text-sm sm:text-base shadow-md transition inline-flex items-center gap-2">
+            Explorar Espécies
+            <i class="fa-solid fa-arrow-down text-xs"></i>
+          </a>
+          <a href="#legalidade" class="px-6 py-3.5 rounded-full bg-white hover:bg-stone-50 text-brand-bark border border-stone-300 font-semibold text-sm sm:text-base transition">
+            Como Funciona o Transporte
+          </a>
+        </div>
+
+        <!-- Selos de Confiança -->
+        <div class="grid grid-cols-3 gap-4 pt-6 border-t border-stone-300/60 max-w-xl">
+          <div>
+            <p class="font-serif font-bold text-xl sm:text-2xl text-brand-green">100%</p>
+            <p class="text-xs text-stone-600">Animais anilhados ou microchipados</p>
+          </div>
+          <div>
+            <p class="font-serif font-bold text-xl sm:text-2xl text-brand-green">GTA &amp; NF</p>
+            <p class="text-xs text-stone-600">Guia de Trânsito Animal emitida</p>
+          </div>
+          <div>
+            <p class="font-serif font-bold text-xl sm:text-2xl text-brand-green">+4.200</p>
+            <p class="text-xs text-stone-600">Criadores atendidos no país</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mosaico Visual Hero -->
+      <div class="lg:col-span-5 grid grid-cols-2 gap-3 sm:gap-4">
+        <div class="space-y-3 sm:space-y-4">
+          <div class="relative rounded-2xl overflow-hidden shadow-lg aspect-[4/5] bg-stone-200 group">
+            <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=600&q=80" alt="Galinha Caipira" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent p-4">
+              <span class="text-xs text-amber-300 font-semibold uppercase tracking-wider">Postura &amp; Corte</span>
+              <p class="text-white font-serif font-bold text-lg">Galinhas</p>
+            </div>
+          </div>
+          <div class="relative rounded-2xl overflow-hidden shadow-lg aspect-[4/3] bg-stone-200 group">
+            <img src="https://images.unsplash.com/photo-1598974357801-cbca100e65d3?auto=format&fit=crop&w=600&q=80" alt="Codornas" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent p-3.5">
+              <span class="text-xs text-amber-300 font-semibold uppercase tracking-wider">Alta Produtividade</span>
+              <p class="text-white font-serif font-bold text-base">Codornas</p>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-3 sm:space-y-4 pt-6">
+          <div class="relative rounded-2xl overflow-hidden shadow-lg aspect-[4/3] bg-stone-200 group">
+            <img src="https://images.unsplash.com/photo-1569396116180-210c182bedb8?auto=format&fit=crop&w=600&q=80" alt="Galo Reprodutor" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent p-3.5">
+              <span class="text-xs text-amber-300 font-semibold uppercase tracking-wider">Genética Pura</span>
+              <p class="text-white font-serif font-bold text-base">Galos</p>
+            </div>
+          </div>
+          <div class="relative rounded-2xl overflow-hidden shadow-lg aspect-[4/5] bg-stone-200 group">
+            <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?auto=format&fit=crop&w=600&q=80" alt="Tartarugas e Jabutis" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent p-4">
+              <span class="text-xs text-emerald-300 font-semibold uppercase tracking-wider">Certificado IBAMA</span>
+              <p class="text-white font-serif font-bold text-lg">Tartarugas &amp; Jabutis</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catálogo Principal -->
+  <main id="catalogo" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+    <!-- Cabeçalho do Catálogo e Filtros -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-terracotta">Plantel Disponível</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-bark mt-1">Escolha sua Criação</h2>
+      </div>
+
+      <!-- Ordenação -->
+      <div class="flex items-center gap-3">
+        <label for="sortSelect" class="text-sm text-stone-600 font-medium shrink-0">Ordenar por:</label>
+        <select id="sortSelect" class="bg-white border border-stone-200 rounded-xl px-3.5 py-2 text-sm font-medium text-brand-bark focus:outline-none focus:ring-2 focus:ring-brand-green/40">
+          <option value="featured">Destaques do Criatório</option>
+          <option value="price-asc">Menor Preço</option>
+          <option value="price-desc">Maior Preço</option>
+          <option value="name">Ordem Alfabética (A–Z)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Abas de Categoria -->
+    <div class="flex items-center gap-2.5 overflow-x-auto no-scrollbar pb-4 mb-8" id="categoryTabs">
+      <button data-category="todos" class="cat-btn active px-5 py-2.5 rounded-full text-sm font-semibold transition cursor-pointer bg-brand-green text-white shadow-sm shrink-0">
+        Todos os Animais (12)
+      </button>
+      <button data-category="galinhas" class="cat-btn px-5 py-2.5 rounded-full text-sm font-semibold transition cursor-pointer bg-white text-stone-700 border border-stone-200 hover:border-brand-green shrink-0">
+        🐔 Galinhas
+      </button>
+      <button data-category="galos" class="cat-btn px-5 py-2.5 rounded-full text-sm font-semibold transition cursor-pointer bg-white text-stone-700 border border-stone-200 hover:border-brand-green shrink-0">
+        🐓 Galos
+      </button>
+      <button data-category="codornas" class="cat-btn px-5 py-2.5 rounded-full text-sm font-semibold transition cursor-pointer bg-white text-stone-700 border border-stone-200 hover:border-brand-green shrink-0">
+        🐦 Codornas
+      </button>
+      <button data-category="tartarugas" class="cat-btn px-5 py-2.5 rounded-full text-sm font-semibold transition cursor-pointer bg-white text-stone-700 border border-stone-200 hover:border-brand-green shrink-0">
+        🐢 Tartarugas &amp; Jabutis
+      </button>
+    </div>
+
+    <!-- Grid de Produtos -->
+    <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <!-- Cards renderizados via JS -->
+    </div>
+
+    <!-- Estado Vazio -->
+    <div id="emptyState" class="hidden text-center py-16 bg-white rounded-3xl border border-stone-200/80">
+      <div class="w-16 h-16 rounded-full bg-brand-sand text-brand-terracotta flex items-center justify-center mx-auto mb-4 text-2xl">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <h3 class="font-serif text-xl font-bold text-brand-bark">Nenhuma espécie encontrada</h3>
+      <p class="text-stone-500 text-sm mt-1 max-w-md mx-auto">Tente buscar por outro termo ou limpe os filtros de categoria para ver todo o nosso plantel.</p>
+      <button onclick="resetFilters()" class="mt-5 px-5 py-2.5 bg-brand-green text-white rounded-full text-sm font-semibold hover:bg-brand-greenDark transition cursor-pointer">
+        Limpar Filtros
+      </button>
+    </div>
+  </main>
+
+  <!-- Seção Informativa: Bem-Estar, Documentação e Frete -->
+  <section id="legalidade" class="bg-white border-t border-stone-200 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-green">Compromisso &amp; Legalidade</span>
+        <h2 class="font-serif text-3xl font-bold text-brand-bark mt-1">Criação Responsável e Entrega Segura</h2>
+        <p class="text-stone-600 text-sm sm:text-base mt-2">
+          Seguimos rigorosamente as normas do MAPA e do IBAMA para garantir saúde animal, biosseguridade e tranquilidade legal ao comprador.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-brand-cream p-7 rounded-2xl border border-stone-200/70">
+          <div class="w-12 h-12 rounded-xl bg-brand-green/10 text-brand-green flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-file-contract"></i>
+          </div>
+          <h3 class="font-serif font-bold text-lg text-brand-bark mb-2">Documentação Oficial</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">
+            <strong>Aves:</strong> Acompanham GTA (Guia de Trânsito Animal) e atestado sanitário veterinário.<br>
+            <strong>Tartarugas &amp; Jabutis:</strong> Nascidos em cativeiro autorizado, com Nota Fiscal, certificado de origem e microchip implantado.
+          </p>
+        </div>
+
+        <div class="bg-brand-cream p-7 rounded-2xl border border-stone-200/70">
+          <div class="w-12 h-12 rounded-xl bg-brand-terracotta/10 text-brand-terracotta flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <h3 class="font-serif font-bold text-lg text-brand-bark mb-2">Transporte de Carga Viva</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">
+            Caixas homologadas, ventiladas e com hidratação em gel para o trajeto. Entregas via transportadora especializada ou retirada agendada no criatório.
+          </p>
+        </div>
+
+        <div class="bg-brand-cream p-7 rounded-2xl border border-stone-200/70">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/15 text-amber-700 flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <h3 class="font-serif font-bold text-lg text-brand-bark mb-2">Suporte Pós-Venda</h3>
+          <p class="text-sm text-stone-600 leading-relaxed">
+            Receba junto ao pedido um guia prático de aclimatação, nutrição inicial, temperatura ideal (para répteis) e calendário de vermifugação.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-brand-bark text-stone-300 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div>
+        <div class="flex items-center gap-2.5 text-white mb-3">
+          <i class="fa-solid fa-feather-pointed text-brand-terracotta text-xl"></i>
+          <span class="font-serif font-bold text-xl">Granja &amp; Répteis</span>
+        </div>
+        <p class="text-xs text-stone-400 leading-relaxed">
+          Criatório comercial registrado no MAPA e autorizado pelo IBAMA. Especialistas em avicultura caipira, ornamental e quelônios nativos.
+        </p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-sm mb-3">Categorias</h4>
+        <ul class="space-y-2 text-xs text-stone-400">
+          <li><a href="#catalogo" onclick="filterByCategory('galinhas')" class="hover:text-white transition">Galinhas Poedeiras &amp; Ornamentais</a></li>
+          <li><a href="#catalogo" onclick="filterByCategory('galos')" class="hover:text-white transition">Galos Reprodutores</a></li>
+          <li><a href="#catalogo" onclick="filterByCategory('codornas')" class="hover:text-white transition">Codornas Japonesas e Gigantes</a></li>
+          <li><a href="#catalogo" onclick="filterByCategory('tartarugas')" class="hover:text-white transition">Tartarugas Tigre d'Água e Jabutis</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-sm mb-3">Atendimento</h4>
+        <ul class="space-y-2 text-xs text-stone-400">
+          <li><i class="fa-brands fa-whatsapp text-emerald-400 mr-1.5"></i> (11) 99876-5432</li>
+          <li><i class="fa-regular fa-envelope mr-1.5"></i> contato@granjaerepteis.com.br</li>
+          <li><i class="fa-regular fa-clock mr-1.5"></i> Seg a Sáb: 08h às 18h</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold text-sm mb-3">Pagamento Seguro</h4>
+        <div class="flex flex-wrap gap-2 text-lg text-stone-300">
+          <span class="px-2.5 py-1 bg-white/10 rounded text-xs font-semibold">PIX (5% OFF)</span>
+          <span class="px-2.5 py-1 bg-white/10 rounded text-xs font-semibold">Cartão até 10x</span>
+          <span class="px-2.5 py-1 bg-white/10 rounded text-xs font-semibold">Boleto</span>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 pt-6 border-t border-white/10 text-center text-xs text-stone-500">
+      &copy; 2026 Granja &amp; Répteis Brasil — Todos os direitos reservados. Proibida a comercialização sem emissão de guia sanitária.
+    </div>
+  </footer>
+
+  <!-- Modal de Detalhes do Animal -->
+  <div id="productModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/60 backdrop-blur-xs">
+    <div class="bg-white rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl border border-stone-200 animate-[fadeIn_0.2s_ease-out]">
+      <div class="relative h-64 sm:h-72 bg-stone-200">
+        <img id="modalImg" src="" alt="" class="w-full h-full object-cover">
+        <button onclick="closeProductModal()" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-brand-bark flex items-center justify-center shadow-md cursor-pointer transition">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+        <span id="modalBadge" class="absolute bottom-4 left-4 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-brand-green text-white shadow"></span>
+      </div>
+      <div class="p-6 sm:p-8 space-y-5">
+        <div class="flex flex-wrap items-start justify-between gap-4">
+          <div>
+            <p id="modalScientific" class="text-xs italic text-stone-500"></p>
+            <h3 id="modalTitle" class="font-serif text-2xl sm:text-3xl font-bold text-brand-bark"></h3>
+          </div>
+          <div class="text-right">
+            <span class="text-xs text-stone-500 block">Valor unitário</span>
+            <span id="modalPrice" class="font-serif text-2xl font-bold text-brand-green"></span>
+          </div>
+        </div>
+
+        <p id="modalDesc" class="text-sm text-stone-600 leading-relaxed"></p>
+
+        <!-- Ficha Técnica -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 bg-brand-cream p-4 rounded-2xl border border-stone-200/80 text-xs">
+          <div>
+            <span class="text-stone-500 block">Idade / Porte</span>
+            <strong id="modalAge" class="text-brand-bark font-semibold"></strong>
+          </div>
+          <div>
+            <span class="text-stone-500 block">Temperamento</span>
+            <strong id="modalTemperament" class="text-brand-bark font-semibold"></strong>
+          </div>
+          <div class="col-span-2 sm:col-span-1">
+            <span class="text-stone-500 block">Documentação</span>
+            <strong id="modalDoc" class="text-brand-green font-semibold"></strong>
+          </div>
+        </div>
+
+        <div class="bg-amber-50 border border-amber-200/80 rounded-xl p-3.5 text-xs text-amber-900 flex items-start gap-2.5">
+          <i class="fa-solid fa-circle-info text-amber-600 mt-0.5"></i>
+          <span id="modalCare"></span>
+        </div>
+
+        <div class="flex items-center justify-end gap-3 pt-2">
+          <button onclick="closeProductModal()" class="px-5 py-2.5 rounded-full border border-stone-300 text-sm font-semibold text-stone-700 hover:bg-stone-50 cursor-pointer">
+            Fechar
+          </button>
+          <button id="modalAddBtn" class="px-6 py-2.5 rounded-full bg-brand-terracotta hover:bg-brand-terracottaDark text-white text-sm font-semibold shadow-md transition flex items-center gap-2 cursor-pointer">
+            <i class="fa-solid fa-cart-plus"></i>
+            Adicionar ao Carrinho
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drawer Lateral do Carrinho -->
+  <div id="cartOverlay" class="fixed inset-0 z-50 hidden bg-black/50 backdrop-blur-xs justify-end">
+    <div class="bg-white w-full max-w-md h-full flex flex-col shadow-2xl drawer-enter">
+      <!-- Header Carrinho -->
+      <div class="px-6 py-5 border-b border-stone-200 flex items-center justify-between bg-brand-cream">
+        <div class="flex items-center gap-2.5">
+          <i class="fa-solid fa-basket-shopping text-brand-green text-lg"></i>
+          <h3 class="font-serif font-bold text-xl text-brand-bark">Seu Pedido</h3>
+        </div>
+        <button onclick="toggleCart(false)" class="w-9 h-9 rounded-full hover:bg-stone-200/70 flex items-center justify-center text-stone-600 cursor-pointer">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Lista de Itens -->
+      <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-6 space-y-4">
+        <!-- Renderizado via JS -->
+      </div>
+
+      <!-- Rodapé do Carrinho / Cálculo de Frete e Checkout -->
+      <div id="cartFooter" class="border-t border-stone-200 p-6 bg-brand-cream space-y-4">
+        <!-- Simulador de Frete Carga Viva -->
+        <div>
+          <label class="text-xs font-semibold text-stone-600 block mb-1.5">Calcular Transporte Carga Viva (CEP)</label>
+          <div class="flex gap-2">
+            <input type="text" id="cepInput" maxlength="9" placeholder="00000-000" class="flex-1 px-3.5 py-2 bg-white border border-stone-300 rounded-xl text-sm focus:outline-none focus:border-brand-green">
+            <button onclick="calculateShipping()" class="px-4 py-2 bg-brand-bark text-white text-xs font-semibold rounded-xl hover:bg-brand-green transition cursor-pointer">
+              Calcular
+            </button>
+          </div>
+          <p id="shippingMsg" class="text-xs text-brand-green font-medium mt-1.5 hidden"></p>
+        </div>
+
+        <div class="space-y-1.5 text-sm pt-2 border-t border-stone-200/80">
+          <div class="flex justify-between text-stone-600">
+            <span>Subtotal</span>
+            <span id="cartSubtotal">R$ 0,00</span>
+          </div>
+          <div class="flex justify-between text-stone-600">
+            <span>Caixa Aérea/Rodoviária + GTA</span>
+            <span id="cartShipping">A calcular</span>
+          </div>
+          <div class="flex justify-between font-bold text-lg text-brand-bark pt-2 border-t border-stone-200">
+            <span>Total</span>
+            <span id="cartTotal" class="font-serif text-brand-green">R$ 0,00</span>
+          </div>
+        </div>
+
+        <button onclick="openCheckoutModal()" class="w-full py-3.5 rounded-full bg-brand-terracotta hover:bg-brand-terracottaDark text-white font-semibold text-sm shadow-md transition flex items-center justify-center gap-2 cursor-pointer">
+          <span>Finalizar Reserva</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Checkout / Emissão de Guia -->
+  <div id="checkoutModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/60 backdrop-blur-xs">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-stone-200">
+      <div id="checkoutFormState">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="font-serif text-2xl font-bold text-brand-bark">Dados para GTA &amp; Nota Fiscal</h3>
+          <button onclick="closeCheckoutModal()" class="text-stone-400 hover:text-stone-700 cursor-pointer">
+            <i class="fa-solid fa-xmark text-lg"></i>
+          </button>
+        </div>
+        <p class="text-xs text-stone-500 mb-5">
+          Para transporte legal de aves e quelônios, precisamos dos dados do destinatário para emissão da Guia de Trânsito Animal e registro de propriedade.
+        </p>
+
+        <form onsubmit="submitOrder(event)" class="space-y-4">
+          <div>
+            <label class="block text-xs font-semibold text-stone-700 mb-1">Nome Completo / Razão Social *</label>
+            <input type="text" required placeholder="Ex: João da Silva" class="w-full px-3.5 py-2.5 border border-stone-300 rounded-xl text-sm focus:outline-none focus:border-brand-green">
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-semibold text-stone-700 mb-1">CPF ou CNPJ *</label>
+              <input type="text" required placeholder="000.000.000-00" class="w-full px-3.5 py-2.5 border border-stone-300 rounded-xl text-sm focus:outline-none focus:border-brand-green">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-stone-700 mb-1">WhatsApp *</label>
+              <input type="tel" required placeholder="(11) 99999-9999" class="w-full px-3.5 py-2.5 border border-stone-300 rounded-xl text-sm focus:outline-none focus:border-brand-green">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-stone-700 mb-1">Cidade / Estado de Destino *</label>
+            <input type="text" required placeholder="Ex: Campinas - SP" class="w-full px-3.5 py-2.5 border border-stone-300 rounded-xl text-sm focus:outline-none focus:border-brand-green">
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-stone-700 mb-1">Forma de Pagamento</label>
+            <select class="w-full px-3.5 py-2.5 border border-stone-300 rounded-xl text-sm bg-white focus:outline-none focus:border-brand-green">
+              <option>PIX Instantâneo (5% de desconto na confirmação)</option>
+              <option>Cartão de Crédito (até 10x sem juros)</option>
+              <option>Transferência Bancária</option>
+            </select>
+          </div>
+          <button type="submit" class="w-full py-3.5 rounded-full bg-brand-green hover:bg-brand-greenDark text-white font-semibold text-sm shadow-md transition cursor-pointer mt-2">
+            Confirmar Pedido e Solicitar GTA
+          </button>
+        </form>
+      </div>
+
+      <!-- Estado de Sucesso -->
+      <div id="checkoutSuccessState" class="hidden text-center py-6 space-y-4">
+        <div class="w-16 h-16 rounded-full bg-emerald-100 text-brand-green flex items-center justify-center mx-auto text-3xl">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h3 class="font-serif text-2xl font-bold text-brand-bark">Reserva Realizada com Sucesso!</h3>
+        <p class="text-sm text-stone-600 leading-relaxed">
+          Protocolo <strong id="orderProtocol" class="text-brand-bark">#GR-2026</strong> gerado. Nossa equipe veterinária entrará em contato via WhatsApp em até 30 minutos com a GTA preliminar e o link de pagamento.
+        </p>
+        <button onclick="finishAndReset()" class="px-6 py-2.5 rounded-full bg-brand-bark text-white text-sm font-semibold hover:bg-brand-green transition cursor-pointer">
+          Voltar à Loja
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notificação -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-brand-bark text-white px-5 py-3 rounded-2xl shadow-xl flex items-center gap-3 text-sm font-medium">
+    <i class="fa-solid fa-circle-check text-emerald-400"></i>
+    <span id="toastText">Adicionado ao carrinho!</span>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
