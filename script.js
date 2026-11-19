@@ -30,7 +30,7 @@ const animals = [
     doc: "GTA + Anilha do Criatório",
     care: "Por ter penas nos pés, recomenda-se piso seco e poleiros baixos (máximo 40 cm do solo).",
     desc: "Conhecida como a 'rainha das galinhas' pelo porte majestoso, plumagem branca com colar preto e pés empenados.",
-    image: "",
+    image: "https://images.unsplash.com/photo-1612170153139-6f881ff067e0?auto=format&fit=crop&w=700&q=80",
     featured: 3
   },
   {
@@ -46,7 +46,7 @@ const animals = [
     doc: "GTA + Atestado Sanitário",
     care: "Plumagem macia como seda que não repele água; manter abrigo coberto em dias chuvosos.",
     desc: "Ave ornamental de plumagem sedosa, pele escura e cinco dedos. Muito procurada como pet e mãe adotiva de ovos.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz_qt5rmKZE5U0SdC2Qo4THqF3SclQjwcdPPUS43nWVQ&s=10",
+    image: "https://images.unsplash.com/photo-1594731884638-8197c3102d1d?auto=format&fit=crop&w=700&q=80",
     featured: 7
   },
 
@@ -64,7 +64,7 @@ const animals = [
     doc: "GTA + Registro Genealógico",
     care: "Requer espaço amplo para exercitar a musculatura e ração balanceada rica em cálcio e proteína.",
     desc: "Reprodutor de linhagem selecionada para melhoramento genético de plantel caipira, com excelente estrutura óssea e porte elevado.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7MvKOcfWqBz49qJob30PxwIaGJdK-sUmm0XwXr4MU9Q&s=10"
+    image: "https://images.unsplash.com/photo-1569396116180-210c182bedb8?auto=format&fit=crop&w=700&q=80",
     featured: 2
   },
   {
@@ -80,7 +80,7 @@ const animals = [
     doc: "GTA + Vacinação em dia",
     care: "Excelente para cruzamento industrial ou caipira visando filhas de alta postura.",
     desc: "Plumagem vermelho-mogno brilhante, alta fertilidade e resistência climática comprovada.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-CS1iMsH_RUzhmLAtedQ0gxw6oXzllKMaRj55bMspqg&s=10",
+    image: "https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=700&q=80",
     featured: 8
   },
   {
@@ -96,7 +96,7 @@ const animals = [
     doc: "GTA + Anilha",
     care: "Ideal para chácaras e quintais pequenos devido ao porte compacto e baixo consumo de ração.",
     desc: "Pequeno notável de pernas curtas e cauda vertical em leque. Muito apreciado em criações ornamentais.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSveAD_2wUZhtcpseN1p7o3-UEE63jycGCB9237T0_52A&s=10",
+    image: "https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=700&q=80",
     featured: 10
   },
 
@@ -114,7 +114,7 @@ const animals = [
     doc: "GTA + Controle Sanitário",
     care: "Necessitam de ração específica para postura de codornas (20% proteína) e água limpa constante.",
     desc: "Lote composto por 10 fêmeas jovens no pico inicial de produção, capazes de botar até 300 ovos/ano cada.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReYi5YaOLcRuXnxx8y1SJqQbO8Bn3IuEKTUjdzsbioJw&s=10",
+    image: "https://images.unsplash.com/photo-1598974357801-cbca100e65d3?auto=format&fit=crop&w=700&q=80",
     featured: 4
   },
   {
@@ -130,7 +130,7 @@ const animals = [
     doc: "GTA + Nota Fiscal",
     care: "Viveiro com altura máxima de 40 cm ou tela macia no teto para evitar impactos ao pular.",
     desc: "Linhagem de dupla aptidão (ovos grandes e carne nobre), ideal para iniciar sua própria matriz reprodutora.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROsvcU1rBHx803aflCPPASXGUcAGt6t9GimSVk0zKVhg&s=10",
+    image: "https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=700&q=80",
     featured: 9
   },
   {
@@ -146,7 +146,7 @@ const animals = [
     doc: "GTA + Anilha",
     care: "Perfeitas para o fundo de viveiros de pássaros exóticos, ajudando na limpeza de sementes caídas.",
     desc: "Menores codornas do mundo, com coloração azul-ardósia e castanha no macho. Muito ornamentais.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuK90PQTwNC0RLn7btqO2DVcrIutwV0zGKqfeBMFpa1A&s",
+    image: "https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=700&q=80",
     featured: 11
   },
 
@@ -180,7 +180,7 @@ const animals = [
     doc: "Certificado IBAMA + Microchip + NF",
     care: "Espécie 100% terrestre (não sabe nadar). Precisa de sol diário, abrigo seco e dieta rica em fibras e cálcio.",
     desc: "O quelônio terrestre mais querido do Brasil, com escamas vermelhas nas patas e casco escuro. Legalizado com nota e microchip.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt-faWhd3ZQIm99r_FPSF24NQDVBcwsLwMkdW9Ds0B4Q&s=10",
+    image: "https://images.unsplash.com/photo-1504450874802-0ba2bcd9b5ae?auto=format&fit=crop&w=700&q=80",
     featured: 6
   },
   {
@@ -196,7 +196,7 @@ const animals = [
     doc: "Certificado IBAMA + Microchip + NF",
     care: "Necessita de tanque ou lago ornamental com rampas de fácil acesso ao sol e alimentação variada.",
     desc: "Espécie brasileira de pescoço longo e barbilhões característicos sob o queixo. Procedência 100% legalizada.",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkNNXOXkFK_WQmXbcLFa7uSHhBDBrYDB42FTxFl3bRCw&s=10",
+    image: "https://images.unsplash.com/photo-1559253664-ca249d4608c6?auto=format&fit=crop&w=700&q=80",
     featured: 12
   }
 ];
