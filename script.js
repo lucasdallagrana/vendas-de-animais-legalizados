@@ -1,6 +1,6 @@
 // Dados dos Pacotes de Diamantes
 const packages = [
-    { id: 1, amount: 100, bonus: 10, price: 4.500,00, popular: false },
+    { id: 1, amount: 100, bonus: 10, price: 4.50, popular: false },
     { id: 2, amount: 310, bonus: 31, price: 13.00, popular: false },
     { id: 3, amount: 520, bonus: 52, price: 20.90, popular: true },
     { id: 4, amount: 1060, bonus: 106, price: 41.50, popular: false },
